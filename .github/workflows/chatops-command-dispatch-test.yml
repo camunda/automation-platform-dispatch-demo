@@ -6,29 +6,6 @@ on:
       - created
 
 jobs:
-  chatOpsCommandParser:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Generate a GitHub token
-        id: generate-github-token
-        uses: camunda/infra-global-github-actions/generate-github-app-token-from-vault-secrets@main
-        with:
-          github-app-id-vault-key: GITHUB_APP_ID
-          github-app-id-vault-path: secret/data/products/cambpm/ci/github-workflow
-          github-app-private-key-vault-key: GITHUB_APP_PRIVATE_KEY
-          github-app-private-key-vault-path: secret/data/products/cambpm/ci/github-workflow
-          vault-auth-method: approle
-          vault-auth-role-id: ${{ secrets.VAULT_ROLE_ID }}
-          vault-auth-secret-id: ${{ secrets.VAULT_SECRET_ID}}
-          vault-url: ${{ secrets.VAULT_ADDR }}
-
-      - name: Slash Command Dispatch
-        uses: peter-evans/slash-command-dispatch@v3
-        with:
-          token: ${{ steps.generate-github-token.outputs.token }}
-          permission: none
-          commands: |
-            help
-            assign
-            start
-            review
+  call-reusable-flow:
+    uses: camunda/automation-platform-github-actions/.github/workflows/chatops-command-dispatch.yml@18-chatops
+    secrets: inherit
