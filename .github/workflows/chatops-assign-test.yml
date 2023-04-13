@@ -18,6 +18,4 @@ jobs:
     secrets: inherit
     with:
       project_id: '68'
-      client_payload_string: ${{ toJson(github.event.client_payload) }}
-      run_url: https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID
       status: "Todo"

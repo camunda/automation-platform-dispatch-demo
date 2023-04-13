@@ -16,6 +16,3 @@ jobs:
   call-reusable-flow:
     uses: camunda/automation-platform-github-actions/.github/workflows/chatops-help.yml@18-chatops
     secrets: inherit
-    with:
-      client_payload_string: ${{ toJson(github.event.client_payload) }}
-      run_url: https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID
