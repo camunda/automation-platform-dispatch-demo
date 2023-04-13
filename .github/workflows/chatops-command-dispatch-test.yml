@@ -25,7 +25,7 @@ jobs:
       - name: Slash Command Dispatch
         uses: peter-evans/slash-command-dispatch@v3
         with:
-          token: ${{ steps.generate-github-token.outputs.token }}
+          token: ${{ secrets.PAT }}
           permission: none
           commands: |
             help
