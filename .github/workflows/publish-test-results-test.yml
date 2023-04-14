@@ -49,10 +49,14 @@ jobs:
              unzip -d "$name" "$name.zip"
            done
 
+      - name: Read SHA ref file
+        id: getsha
+        run: echo "sha=$(cat artifacts/SHAFile/sha_ref)" >> $GITHUB_OUTPUT
+
       - name: Publish Test Results
         uses: EnricoMi/publish-unit-test-result-action@v2
         with:
-          commit: ${{ github.event.workflow_run.head_sha }}
+          commit: ${{ steps.getsha.outputs.sha }}
           event_file: artifacts/Event File/event.json
           event_name: ${{ github.event.workflow_run.event }}
           files: "artifacts/**/*.xml"
