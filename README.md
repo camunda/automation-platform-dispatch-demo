@@ -14,7 +14,7 @@ The following GitHub Actions [automation commands](.github/workflows) are suppor
 | Command                         | Action                                                                                                                       |
 |---------------------------------|------------------------------------------------------------------------------------------------------------------------------|
 | /help                           | Posting the help message with the list of possible commands.                                                                 |
-| /ci                             | Run the basic CI for the PR                                                                                                  |
+| /ci                             | Run the basic CI for the PR and publish test results as comment                                                              |
 
 (commenter = a person who left a PR comment with a command)
 
