@@ -5,7 +5,6 @@ on:
     workflows: ["Test: ChatOps CI command"]
     types:
       - completed
-permissions: {}
 
 jobs:
   call-reusable-flow:
