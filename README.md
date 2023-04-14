@@ -9,6 +9,13 @@ The following GitHub Actions [automation commands](.github/workflows) are suppor
 | /assign @username               | Assignee → @username<br/>DRI → @username<br/>Status → `Ready`                                                                |
 | /review @username               | Assignee → @username<br/>Code Reviewer → @username<br/>Status → `In Review`                                                  |
 
+The following GitHub Actions [automation commands](.github/workflows) are supported in the comments for this repository's PRs:
+
+| Command                         | Action                                                                                                                       |
+|---------------------------------|------------------------------------------------------------------------------------------------------------------------------|
+| /help                           | Posting the help message with the list of possible commands.                                                                 |
+| /ci                             | Run the basic CI for the PR                                                                                                  |
+
 (commenter = a person who left a PR comment with a command)
 
 You can do any of the operations above manually in case you want to bypass the automation.
