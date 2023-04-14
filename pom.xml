@@ -4,6 +4,7 @@
 
   <groupId>foo.bar</groupId>
   <artifactId>dispatch-demo</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Dispatch Demo</name>

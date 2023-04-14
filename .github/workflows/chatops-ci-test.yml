@@ -18,3 +18,4 @@ jobs:
     secrets: inherit
     with:
       maven_parameters: clean verify
+      with_npm: false
