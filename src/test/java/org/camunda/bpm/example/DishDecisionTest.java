@@ -62,7 +62,7 @@ public class DishDecisionTest {
       .putValue("guestCount", 7);
 
     DmnDecisionTableResult result = dmnEngine.evaluateDecisionTable(decision, variables);
-    assertEquals("Steak", result.getSingleResult().getSingleEntry());
+    assertEquals("Steaks", result.getSingleResult().getSingleEntry());
   }
 
   @Test
